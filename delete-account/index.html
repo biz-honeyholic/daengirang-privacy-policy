@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>댕이랑 계정 및 데이터 삭제 요청</title>
+    <meta
+      name="description"
+      content="댕이랑 계정 및 데이터 삭제 요청 방법 안내"
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        --background: #fff8e7;
+        --surface: #ffffff;
+        --text: #2f241d;
+        --muted: #74645a;
+        --border: #ead9c8;
+        --accent: #E56A54;
+        --accent-soft: #fff0e9;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--background);
+        color: var(--text);
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        line-height: 1.65;
+      }
+
+      main {
+        width: min(880px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0 64px;
+      }
+
+      header {
+        margin-bottom: 28px;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 5vw, 3rem);
+        line-height: 1.18;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin: 36px 0 12px;
+        font-size: 1.35rem;
+        line-height: 1.35;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0 0 14px;
+      }
+
+      ul,
+      ol {
+        margin: 0 0 18px;
+        padding-left: 1.4rem;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      a {
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      code {
+        padding: 2px 6px;
+        border-radius: 6px;
+        background: var(--accent-soft);
+        color: var(--text);
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Consolas,
+          monospace;
+        font-size: 0.95em;
+      }
+
+      .panel {
+        padding: 22px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface);
+      }
+
+      .notice {
+        padding: 16px 18px;
+        border-left: 4px solid var(--accent);
+        border-radius: 6px;
+        background: var(--accent-soft);
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .placeholder {
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="muted">댕이랑</p>
+        <h1>계정 및 데이터 삭제 요청</h1>
+        <p>
+          이 페이지는 댕이랑의 계정과 서버 저장 데이터를 삭제하는 방법을
+          안내합니다.
+        </p>
+      </header>
+
+      <section class="panel" aria-labelledby="app-delete">
+        <h2 id="app-delete">앱에서 직접 삭제하기</h2>
+        <p>
+          앱을 사용할 수 있다면 앱 내부 삭제가 가장 빠르고 정확한 방법입니다.
+        </p>
+        <ol>
+          <li>댕이랑 앱을 엽니다.</li>
+          <li><code>더보기 &gt; 설정</code>으로 이동합니다.</li>
+          <li>게스트는 <code>이 기기 데이터 삭제</code>, 이메일 계정 사용자는 <code>이메일 계정 삭제</code>를 선택합니다.</li>
+          <li>안내를 확인한 뒤 삭제를 확정합니다.</li>
+        </ol>
+        <p>
+          게스트 데이터는 단말 로컬에서 삭제됩니다. 이메일 계정 삭제를 완료하면
+          Firebase Auth 계정과 해당 계정에 연결된 서버 저장 데이터가 삭제됩니다.
+        </p>
+      </section>
+
+      <section aria-labelledby="email-delete">
+        <h2 id="email-delete">이메일로 삭제 요청하기</h2>
+        <p>
+          앱을 사용할 수 없거나 외부에서 삭제 요청이 필요한 경우 아래 이메일로
+          요청해 주세요.
+        </p>
+        <ul>
+          <li>
+            요청 이메일:
+            <a href="mailto:biz.honeyholic@gmail.com">biz.honeyholic@gmail.com</a>
+          </li>
+          <li>제목 예시: 댕이랑 계정 및 데이터 삭제 요청</li>
+          <li>
+            포함 정보:
+            가입 이메일 주소와 계정 소유 확인에 필요한 정보. 불필요한 민감정보는 요청하지 않습니다.
+          </li>
+        </ul>
+        <div class="notice">
+          게스트 사용자는 서버 계정이 없고 데이터가 단말 로컬에만 저장됩니다.
+          이메일 계정의 서버 저장 데이터 삭제가 필요한 경우 앱 내부 삭제 기능을
+          우선 이용해 주세요.
+        </div>
+      </section>
+
+      <section aria-labelledby="deleted-data">
+        <h2 id="deleted-data">삭제 대상</h2>
+        <p>계정 삭제 요청이 처리되면 다음 데이터가 삭제됩니다.</p>
+        <ul>
+          <li>이메일 계정의 Firebase Auth 계정</li>
+          <li>이메일 계정에 저장된 반려견 프로필</li>
+          <li>이메일 계정에 저장된 산책 요약 기록</li>
+          <li>이메일 계정에 저장된 찜한 장소</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="not-stored">
+        <h2 id="not-stored">서버에 저장하지 않는 정보</h2>
+        <p>
+          댕이랑은 원본 GPS 좌표와 산책 경로를 서버에 저장하지
+          않습니다. 현재 위치는 단말기에서 산책 컨디션 계산, 주변 장소 거리 표시,
+          산책 거리 계산에 사용한 뒤 서버로 전송하지 않습니다.
+        </p>
+      </section>
+
+      <section aria-labelledby="retention">
+        <h2 id="retention">처리 기간과 보관 안내</h2>
+        <p>
+          이메일 요청은 접수 후 계정 소유 확인을 거쳐 처리 결과를 회신합니다.
+          본인 확인 완료 후 지체 없이 처리하며, 특별한 사정이 없으면 30일 이내
+          처리 결과를 회신합니다.
+        </p>
+        <p>
+          법령상 보관 의무가 있거나 보안, 부정 이용 방지, 분쟁 대응을 위해 필요한
+          경우에는 필요한 범위에서 일정 기간 보관할 수 있습니다.
+        </p>
+      </section>
+
+      <section aria-labelledby="links">
+        <h2 id="links">관련 문서</h2>
+        <ul>
+          <li>
+            개인정보처리방침:
+            <a href="https://biz-honeyholic.github.io/daengirang-privacy-policy/">
+              https://biz-honeyholic.github.io/daengirang-privacy-policy/
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>서비스 제공자: honeyholic</p>
+        <p>최종 업데이트: 2026-07-01</p>
+      </footer>
+    </main>
+  </body>
+</html>
